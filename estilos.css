@@ -1,0 +1,359 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family:'Monotype Corsiva','Apple Chancery','ITC Zapf Chancery','URW Chancery L',cursive;
+}
+
+.contenedor{
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.bg_animate{
+    width: 100%;
+    height: 100vh;
+   /* background: rgb(0,0,0);
+    background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(133,133,133,1) 17%, rgba(255,253,253,0.22779534176952032) 35%);
+    */
+   /* background: rgb(82,142,241);
+    background: linear-gradient(90deg, rgba(82,142,241,1) 0%, rgba(38,38,38,1) 0%, rgba(255,253,253,0.22779534176952032) 47%);
+*/
+background: rgb(255,250,250);
+background: radial-gradient(circle, rgba(255,250,250,0.8423455056179775) 41%, rgba(243,243,243,0) 51%, rgba(0,0,0,0.6850421348314606) 100%, rgba(0,0,0,1) 100%);
+    /* background: #fff;*/
+  /*  background: rgb(82,142,241);
+    background: linear-gradient(90deg, rgba(82,142,241,1) 0%, rgba(92,150,214,1) 0%, rgba(255,253,253,0.22779534176952032) 47%);
+   */
+    position: relative;
+    overflow: hidden;
+}
+
+.header_nav{
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.header_nav .contenedor{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+}
+
+.header_nav h1{
+    color: #fff;
+    font-family: 'Gagalin';
+}
+
+.header_nav nav a{
+    color: #fff;
+    text-decoration: none;
+    margin-right: 10px;
+}
+
+.banner{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+}
+
+.banner .selected {
+    align-self: flex-end;
+    margin-bottom: 500px;
+}
+
+.banner_title h2{
+    color: #000;
+    font-size: 125px;
+    font-weight: 200;
+    margin-bottom: 20px;
+}
+
+#invitacion:hover{
+   color : rgb(139, 142, 146);
+}
+
+#section_inicial{
+    opacity:1;
+    transition:visibility 0.3s linear,opacity 0.3s linear;
+}
+
+#section_secundaria{
+    /*display: flex;
+    justify-content: center;
+    margin-top: 30px;*/
+    position: absolute;
+    width: 700px;
+    left: 50%;
+    margin-left: -350px;
+    visibility: hidden;
+    opacity: 0;
+    transition:visibility 0.3s linear,opacity 0.3s linear;
+    
+}
+#section_tercera{
+    /*display: flex;
+    justify-content: center;
+    margin-top: 30px;*/
+    position: absolute;
+    width: 660px;
+    left: 50%;
+    margin-left: -330px;
+    visibility: hidden;
+    opacity: 0;
+    transition:visibility 0.3s linear,opacity 0.3s linear;
+    
+}
+
+#section_cuarta{
+    /*display: flex;
+    justify-content: center;
+    margin-top: 30px;*/
+    position: absolute;
+    width: 660px;
+    left: 50%;
+    margin-left: -330px;
+    visibility: hidden;
+    opacity: 0;
+    transition:visibility 0.3s linear,opacity 0.3s linear;
+    
+}
+
+#section_quinta{
+    /*display: flex;
+    justify-content: center;
+    margin-top: 30px;*/
+    position: absolute;
+    width: 660px;
+    left: 50%;
+    margin-left: -330px;
+    visibility: hidden;
+    opacity: 0;
+    transition:visibility 0.3s linear,opacity 0.3s linear;
+    
+}
+
+#section_sexta{
+    display: flex;
+    justify-content: center;
+    visibility: hidden;
+    opacity: 0;
+    margin-top: 40px;
+}
+.flechas{
+    display: inline;
+    position: absolute;
+    visibility: hidden;
+    width: 1000px;
+    left: 50%;
+    top: 50%;
+    
+}
+
+.flecha_derecha{
+    position: absolute;
+    margin-left: 350px;
+    animation: movimiento_derecha 2.5s linear infinite;
+}
+
+.flecha_izquierda{
+    position: absolute;
+    margin-left: -400px;
+    animation: movimiento_izquierda 2.5s linear infinite;
+
+}
+
+.flecha_izquierda img:hover{
+    width: 55px;
+    height: 55px;
+}
+
+.flecha_derecha img:hover{
+    width: 55px;
+    height: 55px;
+}
+
+
+
+.banner_img{
+    animation: movimiento 2.5s linear infinite;
+}
+
+.banner_img img{
+    width: 600px;
+    display: block;
+}
+
+/* burbujas */
+
+.burbuja{
+    opacity: .3;
+
+    position: absolute;
+    bottom: -150;
+
+    
+    animation: burbujas 3s linear infinite ;
+    
+}
+
+.burbuja:nth-child(1){
+    width: 80px;
+    height: 80px;
+    left: 5%;
+    animation-duration: 3s;
+    animation-delay: 3s;
+}
+
+.burbuja:nth-child(2){
+    width: 100px;
+    height: 100px;
+    left: 35%;
+    animation-duration: 3s;
+    animation-delay: 5s;
+}
+
+.burbuja:nth-child(3){
+    width: 20px;
+    height: 20px;
+    left: 15%;
+    animation-duration: 1.5s;
+    animation-delay: 7s;
+}
+
+.burbuja:nth-child(4){
+    width: 50px;
+    height: 50px;
+    left: 90%;
+    animation-duration: 6s;
+    animation-delay: 3s;
+}
+
+.burbuja:nth-child(5){
+    width: 70px;
+    height: 70px;
+    left: 65%;
+    animation-duration: 3s;
+    animation-delay: 1s;
+}
+
+.burbuja:nth-child(6){
+    width: 20px;
+    height: 20px;
+    left: 50%;
+    animation-duration: 4s;
+    animation-delay: 5s;
+}
+
+.burbuja:nth-child(7){
+    width: 20px;
+    height: 20px;
+    left: 50%;
+    animation-duration: 4s;
+    animation-delay: 5s;
+}
+
+.burbuja:nth-child(8){
+    width: 100;
+    height: 100px;
+    left: 52%;
+    animation-duration: 5s;
+    animation-delay: 5s;
+}
+
+.burbuja:nth-child(9){
+    width: 65px;
+    height: 65px;
+    left: 51%;
+    animation-duration: 3s;
+    animation-delay: 2s;
+}
+
+.burbuja:nth-child(10){
+    width: 40px;
+    height: 40px;
+    left: 35%;
+    animation-duration: 3s;
+    animation-delay: 4s;
+}
+
+
+@keyframes burbujas{
+    0%{
+        bottom: 0;
+        opacity: 0;
+        transform: rotate(0deg);
+    }
+    30%{
+        transform: translateX(30px);
+        transform: rotate(25deg);
+    }
+    50%{
+        opacity: 1;
+        transform: rotate(50deg);
+    }
+    100%{
+        bottom: 100vh;
+        opacity: 0;
+        transform: rotate(75deg);
+    }
+}
+
+@keyframes movimiento{
+    0%{
+        transform: translateY(0);
+        
+    }
+    50%{
+        transform: translateY(30px);
+        ;
+    }
+    100%{
+        transform: translateY(0);
+        
+    }
+
+    
+}
+
+@keyframes movimiento_derecha{
+    0%{
+        transform: translateX(0);
+        
+    }
+    50%{
+        transform: translateX(10px);
+        ;
+    }
+    100%{
+        transform: translateX(0);
+        
+    }
+
+    
+}
+
+@keyframes movimiento_izquierda{
+    0%{
+        transform: translateX(0);
+        
+    }
+    50%{
+        transform: translateX(-10px);
+        ;
+    }
+    100%{
+        transform: translateX(0);
+        
+    }
+
+    
+}

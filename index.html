@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fondo animado</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <header class="bg_animate">
+        <div class="flechas" >
+            <div class="flecha_derecha" onclick="mostrar_invitacion2(1);">
+                <img src="derecha.png" width="50px" height="50px" alt="">
+            </div>
+            <div class="flecha_izquierda" onclick="mostrar_invitacion2(-1);"">
+                <img src="izquierda.png" width="50px" height="50px" alt="">
+            </div>
+        </div> 
+        <section id="section_inicial" class="banner contenedor">
+            <div class="banner_img">
+                <img src="birrete.png" alt="">
+                <div  style="text-align: center; font-size: 50px;" onclick="mostrar_invitacion();">
+                <p id="invitacion"><u>Abrir invitación</u></p>
+                </div>
+            </div>
+            <section class="banner_title">
+                <h2>Ceremonia <br>De<br>Graduación</h2>
+            </section>
+            
+        </section>
+        <section id="section_secundaria" class="banner contenedor">
+            <div >
+                <img src="invitacion_opt.png" width="700px" height="868px" alt="">               
+            </div>
+        </section>
+        <section id="section_tercera" class="banner contenedor">
+            <div >
+                <img src="invitacion_adentrop1.png" width="660px" height="600px" alt="">               
+            </div>
+        </section>
+        <section id="section_cuarta" class="banner contenedor">
+            <div >
+                <img src="invitacion_adentrop2.png" width="708px" height="600px" alt="">               
+            </div>
+        </section>
+        <section id="section_quinta" class="banner contenedor">
+            <div >
+                <img src="invitacion_atras.jpg" width="660px" height="600px" alt="">               
+            </div>
+        </section>
+        <section id="section_sexta" class="banner contenedor">
+            <div style="font-size: 35px;" >
+                <p>Me complace  invitarte a presenciar el acto de<br>mi graduación de forma virtual.<br>Será trasmitido por las siguientes plataformas:</p>
+                <div style="display: inline;">
+                    <a href="https://www.facebook.com/UDBelsalvador/"><img src="http://assets.stickpng.com/thumbs/585e4da1cb11b227491c339c.png" width="200px" height="180px" alt="Facebook"></a>
+                    <a href="https://www.youtube.com/user/UDBmultimedia"><img src="http://assets.stickpng.com/images/580b57fcd9996e24bc43c548.png" width="220px" height="180px" alt="youtube"></a>     
+                    
+                </div>
+                        
+            </div>
+        </section>
+        
+        <div class="burbujas">
+            <img  class="burbuja" src="estrelladorada.png" width="90px" height="90px"/>
+            <img  class="burbuja" src="estrelladorada.png" width="90px" height="90px"/>
+            <img  class="burbuja" src="estrelladorada.png" width="90px" height="90px"/>
+            <img  class="burbuja" src="estrelladorada.png" width="90px" height="90px"/>
+            <img  class="burbuja" src="estrelladorada.png" width="90px" height="90px"/>
+            <img  class="burbuja" src="estrelladorada.png" width="90px" height="90px"/>
+            <img  class="burbuja" src="estrelladorada.png" width="90px" height="90px"/>
+            <img  class="burbuja" src="estrelladorada.png" width="90px" height="90px"/>
+            <img  class="burbuja" src="estrelladorada.png" width="90px" height="90px"/>
+            <img  class="burbuja" src="estrelladorada.png" width="90px" height="90px"/>
+        </div>
+        
+    </header>
+    
+</body>
+<script>
+    function mostrar_invitacion(){
+        document.getElementById("section_inicial").style.visibility = "hidden";
+        document.getElementById("section_inicial").style.opacity = 0;
+        setTimeout(function(){ 
+         document.getElementById("section_inicial").style.display = "none";
+         document.getElementById("section_secundaria").style.visibility = "visible";
+         document.getElementById("section_secundaria").style.opacity = 1;
+         document.getElementsByClassName("flechas")[0].style.visibility = "visible";
+         document.getElementsByClassName("flecha_izquierda")[0].style.visibility = "hidden";
+         }, 1000);
+         
+
+        
+    }
+    function mostrar_invitacion2(direccion){
+        if(direccion == 1)
+        {
+            if(document.getElementById("section_secundaria").style.visibility == "visible")
+            {
+                //ocultar segunda mostrar tercera
+                document.getElementById("section_secundaria").style.visibility = "hidden";
+                document.getElementById("section_secundaria").style.opacity = 0;
+                setTimeout(function(){ 
+                document.getElementById("section_secundaria").style.display = "none";
+                document.getElementById("section_tercera").style.display = "flex";
+                document.getElementById("section_tercera").style.visibility = "visible";
+                document.getElementById("section_tercera").style.opacity = 1;
+                document.getElementsByClassName("flecha_izquierda")[0].style.visibility = "visible";
+                }, 1000);
+            }
+           if(document.getElementById("section_tercera").style.visibility == "visible"){
+                document.getElementById("section_tercera").style.visibility = "hidden";
+                document.getElementById("section_tercera").style.opacity = 0;
+                setTimeout(function(){ 
+                document.getElementById("section_tercera").style.display = "none";
+                document.getElementById("section_cuarta").style.display = "flex";
+                document.getElementById("section_cuarta").style.visibility = "visible";
+                document.getElementById("section_cuarta").style.opacity = 1;
+                }, 1000);
+           }
+           if(document.getElementById("section_cuarta").style.visibility == "visible"){
+                document.getElementById("section_cuarta").style.visibility = "hidden";
+                document.getElementById("section_cuarta").style.opacity = 0;
+                setTimeout(function(){ 
+                document.getElementById("section_cuarta").style.display = "none";
+                document.getElementById("section_quinta").style.display = "flex";
+                document.getElementById("section_quinta").style.visibility = "visible";
+                document.getElementById("section_quinta").style.opacity = 1;
+                }, 1000);
+           }
+           if(document.getElementById("section_quinta").style.visibility == "visible"){
+                document.getElementById("section_quinta").style.visibility = "hidden";
+                document.getElementById("section_quinta").style.opacity = 0;
+                setTimeout(function(){ 
+                document.getElementById("section_quinta").style.display = "none";
+                document.getElementById("section_sexta").style.display = "flex";
+                document.getElementById("section_sexta").style.visibility = "visible";
+                document.getElementById("section_sexta").style.opacity = 1;
+                document.getElementsByClassName("flecha_derecha")[0].style.visibility = "hidden";
+                }, 1000);
+           }
+        }
+        else
+        {
+            if(document.getElementById("section_tercera").style.visibility == "visible"){
+               //ocultar tercera mostrar segunda
+                document.getElementById("section_tercera").style.visibility = "hidden";
+                document.getElementById("section_tercera").style.opacity = 0;
+                setTimeout(function(){ 
+                document.getElementById("section_tercera").style.display = "none";
+                document.getElementById("section_secundaria").style.display = "flex";
+                document.getElementById("section_secundaria").style.visibility = "visible";
+                document.getElementById("section_secundaria").style.opacity = 1;
+                document.getElementsByClassName("flecha_izquierda")[0].style.visibility = "hidden";
+                }, 1000);
+           }
+
+           if(document.getElementById("section_cuarta").style.visibility == "visible"){
+               //ocultar cuarta mostrar tercera
+                document.getElementById("section_cuarta").style.visibility = "hidden";
+                document.getElementById("section_cuarta").style.opacity = 0;
+                setTimeout(function(){ 
+                document.getElementById("section_cuarta").style.display = "none";
+                document.getElementById("section_tercera").style.display = "flex";
+                document.getElementById("section_tercera").style.visibility = "visible";
+                document.getElementById("section_tercera").style.opacity = 1;
+                }, 1000);
+           }
+
+           if(document.getElementById("section_quinta").style.visibility == "visible"){
+               //ocultar quinta mostrar cuarta
+                document.getElementById("section_quinta").style.visibility = "hidden";
+                document.getElementById("section_quinta").style.opacity = 0;
+                setTimeout(function(){ 
+                document.getElementById("section_quinta").style.display = "none";
+                document.getElementById("section_cuarta").style.display = "flex";
+                document.getElementById("section_cuarta").style.visibility = "visible";
+                document.getElementById("section_cuarta").style.opacity = 1;
+                
+                }, 1000);
+            }
+                if(document.getElementById("section_sexta").style.visibility == "visible"){
+               //ocultar quinta mostrar cuarta
+                document.getElementById("section_sexta").style.visibility = "hidden";
+                document.getElementById("section_sexta").style.opacity = 0;
+                setTimeout(function(){ 
+                document.getElementById("section_sexta").style.display = "none";
+                document.getElementById("section_quinta").style.display = "flex";
+                document.getElementById("section_quinta").style.visibility = "visible";
+                document.getElementById("section_quinta").style.opacity = 1;
+                document.getElementsByClassName("flecha_derecha")[0].style.visibility = "visible";
+                
+                }, 1000);
+            }
+        }
+    }
+</script>
+</html>
