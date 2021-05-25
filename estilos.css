@@ -1,12 +1,13 @@
 *{
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
 }
 
 body{
     font-family:'Monotype Corsiva','Apple Chancery','ITC Zapf Chancery','URW Chancery L',cursive;
 }
+
+@media screen and (min-width: 780px) and (max-width: 3000px){
 
 .contenedor{
     width: 90%;
@@ -17,18 +18,8 @@ body{
 .bg_animate{
     width: 100%;
     height: 100vh;
-   /* background: rgb(0,0,0);
-    background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(133,133,133,1) 17%, rgba(255,253,253,0.22779534176952032) 35%);
-    */
-   /* background: rgb(82,142,241);
-    background: linear-gradient(90deg, rgba(82,142,241,1) 0%, rgba(38,38,38,1) 0%, rgba(255,253,253,0.22779534176952032) 47%);
-*/
-background: rgb(255,250,250);
-background: radial-gradient(circle, rgba(255,250,250,0.8423455056179775) 41%, rgba(243,243,243,0) 51%, rgba(0,0,0,0.6850421348314606) 100%, rgba(0,0,0,1) 100%);
-    /* background: #fff;*/
-  /*  background: rgb(82,142,241);
-    background: linear-gradient(90deg, rgba(82,142,241,1) 0%, rgba(92,150,214,1) 0%, rgba(255,253,253,0.22779534176952032) 47%);
-   */
+    background: rgb(255,250,250);
+    background: radial-gradient(circle, rgba(255,250,250,0.8423455056179775) 41%, rgba(243,243,243,0) 51%, rgba(0,0,0,0.6850421348314606) 100%, rgba(0,0,0,1) 100%);
     position: relative;
     overflow: hidden;
 }
@@ -285,6 +276,296 @@ background: radial-gradient(circle, rgba(255,250,250,0.8423455056179775) 41%, rg
     animation-delay: 4s;
 }
 
+}/*fin desktop*/
+/*
+@media screen and (min-width: 480px) and (max-width: 780px){
+    .banner_img{
+        animation: movimiento 2.5s linear infinite;
+    }
+    
+    .banner_img img{
+        width: 150px;
+        display: block;
+    }
+}
+*/
+@media screen and (max-width: 780px){
+    .contenedor{
+        width: 100%;
+        margin: 0;
+    }
+
+    body{
+        width: 100%;
+        height: 100vh;
+        background: rgb(255,250,250);
+        background: radial-gradient(circle, rgba(255,250,250,0.8423455056179775) 41%, rgba(243,243,243,0) 51%, rgba(0,0,0,0.6850421348314606) 100%, rgba(0,0,0,1) 100%);
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-position: center; 
+
+    }
+    
+    .banner_title{
+        color: #000;
+        font-size: 50px;
+        font-weight: 200;
+        width: 100%;
+        position: absolute;
+        left: 50%;
+        margin-left: -15%;    
+    }
+    .banner_img{
+        position: absolute;
+        top: 450px;
+        left: 50%;
+        margin-left: -15%; 
+        animation: movimiento 2.5s linear infinite;
+        
+        
+    }
+    
+    .banner_img img{
+        width: 300px;
+        
+    }
+    #section_inicial{
+        width: max-content;
+        opacity:1;
+        transition:visibility 0.3s linear,opacity 0.3s linear;
+    }
+    
+    #section_secundaria{
+        position: relative;
+        width: 100%;
+        left: 50%;
+        margin-left: -50%;    
+        top:150px;
+        visibility: hidden;
+        opacity: 0;
+        transition:visibility 0.3s linear,opacity 0.3s linear;
+        
+    }
+    #section_secundaria img[src="invitacion_opt.png"]{
+        width: 600px;
+        height: 744px;
+    }
+
+    
+    #section_tercera{
+        /*display: flex;
+        justify-content: center;
+        margin-top: 30px;*/
+        position: absolute;
+        left: 50%;
+        margin-left: -50%;    
+        top:160px;
+        visibility: hidden;
+        opacity: 0;
+        transition:visibility 0.3s linear,opacity 0.3s linear;
+        
+    }
+
+    #section_tercera img[src="invitacion_adentrop1.png"]{
+        width: 550px;
+        height: 605px;
+    }
+
+    
+    #section_cuarta{
+        /*display: flex;
+        justify-content: center;
+        margin-top: 30px;*/
+        position: absolute;;
+        left: 50%;
+        margin-left: -50%;    
+        top:160px;
+        visibility: hidden;
+        opacity: 0;
+        transition:visibility 0.3s linear,opacity 0.3s linear;
+        
+    }
+
+    #section_cuarta img[src="invitacion_adentrop2.png"]{
+        width: 550px;
+        height: 605px;
+    }
+    
+    #section_quinta{
+        /*display: flex;
+        justify-content: center;
+        margin-top: 30px;*/
+        position: absolute;
+        left: 50%;
+        margin-left: -50%;    
+        top:160px;
+        visibility: hidden;
+        opacity: 0;
+        transition:visibility 0.3s linear,opacity 0.3s linear;
+        
+    }
+
+    #section_quinta img[src="invitacion_atras.png"]{
+        width: 550px;
+        height: 605px;
+    }
+    
+    #section_sexta{
+        position: relative;
+        height: 300px;
+        left: 50%;
+        margin-left: -20%;    
+        top:30px;
+        bottom: -20px;
+        visibility: hidden;
+        opacity: 0;
+    }
+
+    .flechas{
+        display: inline;
+        position: absolute;
+        visibility: hidden;
+        width: 300px;
+        left: 50%;
+        top: 800px;
+        z-index: 1;
+        
+    }
+    
+    .flecha_derecha{
+        position: absolute;
+        margin-left: 150px;
+        animation: movimiento_derecha 2.5s linear infinite;
+    }
+    
+    .flecha_izquierda{
+        position: absolute;
+        margin-left: -10px;
+        animation: movimiento_izquierda 2.5s linear infinite;
+    
+    }
+    
+    .flecha_izquierda img:hover{
+        width: 55px;
+        height: 55px;
+    }
+    
+    .flecha_derecha img:hover{
+        width: 55px;
+        height: 55px;
+    }
+
+/* burbujas */
+
+.burbuja{
+    opacity: .3;
+    position: absolute;
+    bottom: -500px;
+    animation: burbujas 3s linear infinite ;
+    
+}
+
+.burbuja:nth-child(1){
+    width: 80px;
+    height: 80px;
+    left: 5%;
+    animation-duration: 3s;
+    animation-delay: 3s;
+}
+
+.burbuja:nth-child(2){
+    width: 100px;
+    height: 100px;
+    left: 35%;
+    animation-duration: 3s;
+    animation-delay: 5s;
+}
+
+.burbuja:nth-child(3){
+    width: 20px;
+    height: 20px;
+    left: 15%;
+    animation-duration: 1.5s;
+    animation-delay: 7s;
+}
+
+.burbuja:nth-child(4){
+    width: 50px;
+    height: 50px;
+    left: 90%;
+    animation-duration: 6s;
+    animation-delay: 3s;
+}
+
+.burbuja:nth-child(5){
+    width: 70px;
+    height: 70px;
+    left: 65%;
+    animation-duration: 3s;
+    animation-delay: 1s;
+}
+
+.burbuja:nth-child(6){
+    width: 20px;
+    height: 20px;
+    left: 50%;
+    animation-duration: 4s;
+    animation-delay: 5s;
+}
+
+.burbuja:nth-child(7){
+    width: 20px;
+    height: 20px;
+    left: 50%;
+    animation-duration: 4s;
+    animation-delay: 5s;
+}
+
+.burbuja:nth-child(8){
+    width: 100;
+    height: 100px;
+    left: 52%;
+    animation-duration: 5s;
+    animation-delay: 5s;
+}
+
+.burbuja:nth-child(9){
+    width: 65px;
+    height: 65px;
+    left: 51%;
+    animation-duration: 3s;
+    animation-delay: 2s;
+}
+
+.burbuja:nth-child(10){
+    width: 40px;
+    height: 40px;
+    left: 35%;
+    animation-duration: 3s;
+    animation-delay: 4s;
+}
+
+@keyframes burbujas{
+    0%{
+        bottom: -1000px;
+        opacity: 0;
+        transform: rotate(0deg);
+    }
+    30%{
+        transform: translateX(30px);
+        transform: rotate(25deg);
+    }
+    50%{
+        opacity: 1;
+        transform: rotate(50deg);
+    }
+    100%{
+        bottom: 100vh;
+        opacity: 0;
+        transform: rotate(75deg);
+    }
+}
+}/*end media query*/
 
 @keyframes burbujas{
     0%{
